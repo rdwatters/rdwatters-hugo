@@ -1,0 +1,5 @@
+<section>
+    {{ if .Site.Params.CopyrightLine }}
+    <p>&copy; {{ .Site.LastChange.Format "2006"}}</span> {{.Site.Params.CopyrightLine}}</p>
+    {{ end }}
+</section>

@@ -1,0 +1,45 @@
+<footer class="content-footer">
+	<ul class="tags">
+		{{ range .Params.tags }}
+		<li><a class="tag"href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}">{{ . }}</a></li>
+		{{ end }}
+	</ul>
+	<section class="prev-and-next">
+		{{ if .NextInSection }}
+		<a href="{{.NextInSection.Permalink}}" class="direction previous">
+		{{ partial "_icons/previous-icon.svg" . }}
+		<div class="direction-content">
+			<div class="direction-text">
+				<div class="direction-inner">
+					<div class="direction-heading">PREVIOUS {{ .Section | singularize | upper}}</div>
+					{{ .NextInSection.Title }}
+					<div class="direction-date">{{ .NextInSection.PublishDate.Format "January 2, 2006" }}</div>
+				</div>
+			</div>
+		</div>	
+		</a>
+		{{ end }}
+		{{ if .PrevInSection }}
+		<a href="{{.PrevInSection.Permalink}}" class="direction next">
+		{{ partial "_icons/next-icon.svg" .}}
+		<div class="direction-content">
+			<div class="direction-text">
+				<div class="direction-inner">
+					<div class="direction-heading">NEXT {{ .Section | singularize | upper}}</div>
+					{{ .PrevInSection.Title }}
+					<div class="direction-date">{{ .PrevInSection.PublishDate.Format "January 2, 2006" }}</div>
+				</div>
+			</div>
+		</div>
+		</a>
+		{{ end }}
+	</section>
+		{{ if .PrevInSection }}	
+		<link rel="prefetch" href="{{.PrevInSection.Permalink}}">
+		<link rel="prerender" href="{{.PrevInSection.Permalink}}">
+		{{ end }}
+		{{ if .NextInSection }}
+		<link rel="prefetch" href="{{.NextInSection.Permalink}}">
+		<link rel="prerender" href="{{.NextInSection.Permalink}}">
+		{{ end }}		
+	</footer>

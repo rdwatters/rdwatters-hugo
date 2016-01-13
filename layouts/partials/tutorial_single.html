@@ -1,0 +1,8 @@
+<main id="main">
+	<article>
+		{{ partial "_tutorials/tutorial_header.html" . }}
+		{{ .Content }}
+		{{ $theSer := .Params.series }}
+	</article>
+	{{ partial "_tutorials/tutorial_footer.html" . }}
+</main>

@@ -1,0 +1,12 @@
+<header class="article-header-with-image" style="background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('/images/{{.Params.main_image}}')">
+	<section class="article-information">
+		<h1> {{ .Title }}</h1>
+		<section class="publishg-metadata">
+			<time>{{ .PublishDate.Format "January 2, 2006" }}</time>
+			<div class="reading-time">
+				<div>{{ partial "_icons/clock-icon.svg" .}} {{ .ReadingTime }}-minute read</div>
+			</div>
+		</section>
+		<a href="/articles" class="breadcrumb-link"> Back to Articles ← </a>
+	</section>
+</header>

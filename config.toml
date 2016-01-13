@@ -1,0 +1,60 @@
+BaseURL = ""
+languageCode = "en-us"
+title = "Ryan Watters"
+buildDrafts = true
+relativeURLs = true
+canonifyurls = true
+pygmentsUseClasses = true
+MetaDataFormat = "yaml"
+watch = true
+disableLiveReload= false
+verbose = true
+
+#Variables available site wide; note that the CopyrightLine will already include the copyright symbole to the left of it and the current year
+[params]
+	AuthorName = "Ryan D Watters"
+	GitHubUser = "rdwatters"
+	MyFavoriteColor = "blue"
+    CopyrightLine = "Ryan D Watters, ELS"
+    Twitter = "ryandwatters"
+    YouTube = ""
+    #For GooglePlus, you do not need to include the "+" that precedes your username for your profile
+    GooglePlus = "RyanWattersRyanWatters"
+    #For your LinkedIn Account, copy everything after the linked.com/in/ and use that for your public profile
+    LinkedIn = "ryan-watters-els-08010725"
+    Instagram = ""
+    Tumblr = ""
+    Pinterest = ""
+    Include_RSS = true
+    SiteDescription = "This is the official site of Ryan D Watters, ELS."
+    UseCRP = true
+
+[blackfriday]
+	plainIDAnchors = true
+	hrefTargetBlank = true
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+# Global Menu - Note that the greater the negative weight, the further up the item will appear on the global navigation
+[[menu.main]]
+    name = "Articles"
+    identifier = "articles"
+    url = "/articles/"
+    weight = -110
+[[menu.main]]
+    name = "Tutorials"
+    identifier = "tutorials"
+    url = "/tutorials/"
+    weight = -105
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    url = "/about/"
+    weight = -102
+[[menu.main]]
+    name = "Contact"
+    identifier = "contact"
+    url = "/contact/"
+    weight = -100
+

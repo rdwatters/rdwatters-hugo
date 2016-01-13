@@ -1,0 +1,32 @@
+aside {
+    #disqus_thread {
+        font-family:$base-font-family!important;
+        width: 90%;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: $content-max-width;
+        @include MQ(M) {
+            margin-bottom: 50px;
+            font-family:$base-font-family!important;
+            margin-top: 10px;
+            padding-top: 0px;
+        }
+        iframe{
+            font-family:$base-font-family!important;
+        }
+        #layout{
+            font-family:$base-font-family!important;
+        }
+        a, abbr, acronym, address, blockquote, button, caption, cite, code, ul, li, span, strong, em {
+            font-family:$base-font-family!important;
+        }
+    }
+}
+
+//Empty div added to clear arrows at article bottom in cases where comments are not included
+
+.no-comments {
+    height:50px;
+}
+

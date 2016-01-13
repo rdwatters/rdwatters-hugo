@@ -1,0 +1,308 @@
+article#search-page {
+    >h1 {
+        display: block;
+        float: right;
+        width: auto;
+        text-align: right;
+    }
+}
+
+#search-overlay-toggle {
+    #search-icon {
+        height: $global-nav-font-size-mobile;
+        transform: translateY($global-nav-font-size-mobile/5);
+        @include MQ(M) {
+            height: $search-icon-size-m-plus-screen-sizes;
+            position: absolute;
+            top: $search-icon-size-m-plus-screen-sizes/2;
+            right: $search-icon-size-m-plus-screen-sizes/2;
+            transform: translateY(-210px);
+        }
+        fill:$global-nav-font-color;
+    }
+    &:after {
+        content: ' Search';
+    }
+    @include MQ(M) {
+        &:before {
+            content: 'Press "S" to Search';
+            color: white;
+            height: $search-icon-size-m-plus-screen-sizes;
+            right: 55px;
+            font-size: 12px;
+            position: absolute;
+            top: $search-icon-size-m-plus-screen-sizes/2;
+            transform: translateY(-205px);
+
+        }
+        &:after {
+            content: '';
+        }
+    }
+}
+
+#tipue_search_content {
+    max-width: $content-max-width;
+    padding-top: 15px;
+    margin: 0;
+    h3 {
+        font-size: $base-font-size;
+        font-weight: $base-font-weight;
+    }
+    h4 {
+        font-size: $base-font-size;
+        font-weight: $base-font-weight;
+    }
+}
+
+#tipue_search_warning {
+    font-family: $search-overlay-font-family;
+    font-weight:300;
+    color: #555;
+    margin: 7px 0;
+}
+
+#tipue_search_warning a {
+    color: $warning-color;
+    text-decoration: none;
+}
+
+#tipue_search_warning a:hover {
+    color: #555;
+}
+
+#tipue_search_results_count {
+    font: 300 15px/1.7;
+    font-family: $search-overlay-font-family;
+    color: #555;
+}
+
+#tipue_search_replaced {
+    font-style:italic;
+    font-weight:bold;
+    color:$warning-color;
+}
+
+span.search-term-top {
+    color: $search-result-matching-term-text-color;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tipue_search_content_title {
+    margin-top: 23px;
+}
+
+.tipue_search_content_title a {
+    color: $search-result-heading-font-color;
+    text-decoration: none;
+    font-size: $search-result-heading-font-size;
+    font-family: $search-result-heading-font-family;
+}
+
+.tipue_search_content_title a:hover {
+    color: #555;
+}
+
+.tipue_search_content_url {
+    font: 300 14px/1.9 $search-overlay-font-family;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.tipue_search_content_url a {
+    color: $anchor-color;
+    text-decoration: none;
+}
+
+.tipue_search_content_url a:hover {
+    color: #555;
+}
+
+.tipue_search_content_text {
+    font: 300 15px/1.6 $search-overlay-font-family;
+    color: #555;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin-top: 3px;
+}
+
+.tipue_search_content_debug {
+    font: 300 13px/1.6 $search-overlay-font-family;
+    color: #555;
+    margin: 5px 0;
+}
+
+.h01 {
+    color: $search-result-matching-term-text-color;
+    font-weight: bold;
+}
+
+#tipue_search_foot {
+    margin: 51px 0 21px 0;
+}
+
+#tipue_search_foot_boxes {
+    padding: 0;
+    margin: 0;
+    font: 12px 'Open Sans', sans-serif;
+}
+
+#tipue_search_foot_boxes li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#tipue_search_foot_boxes li a {
+    padding: 10px 17px 11px 17px;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 1px;
+    color: #333;
+    margin-right: 7px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#tipue_search_foot_boxes li.current {
+    padding: 10px 17px 11px 17px;
+    background: #f6f6f6;
+    border: 1px solid #e2e2e2;
+    border-radius: 1px;
+    color: #333;
+    margin-right: 7px;
+    text-align: center;
+}
+
+#tipue_search_foot_boxes li a:hover {
+    background: #f6f6f6;
+}
+
+
+/* spinner */
+
+.tipue_search_spinner {
+    padding: 31px 0;
+    width: 50px;
+    height: 28px;
+}
+
+.tipue_search_spinner > div {
+    background-color: #777;
+    height: 100%;
+    width: 3px;
+    display: inline-block;
+    margin-right: 2px;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.tipue_search_spinner .tipue_search_rect2 {
+    animation-delay: -1.1s;
+}
+
+.tipue_search_spinner .tipue_search_rect3 {
+    animation-delay: -1.0s;
+}
+
+@keyframes stretchdelay {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+    }
+}
+
+.search-form {
+    position: fixed;
+    display: none;
+    &.search-open {
+        display: block;
+        overflow-y: scroll;
+        padding-bottom: 80px;
+        z-index:9999;
+    }
+    top:0;
+    left:0;
+    width:100%;
+    width:100vw;
+    height:100%;
+    height:100vh;
+    margin:0px;
+    border:0px;
+    padding-left:5%;
+    padding-right:5%;
+    z-index:9999;
+    background-color:white;
+    a#close-search {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        width: $base-font-size;
+        height: $base-font-size;
+        @include MQ(M) {
+            top: 30px;
+            right: 30px;
+        }
+        @include MQ(L) {
+            right: 60px;
+            float: left;
+            width: $base-font-size * 2;
+            height: $base-font-size * 2;
+        }
+        max-width: $content-max-width * .75;
+        margin-left:auto;
+        margin-right:auto;
+        svg#close-icon {
+            min-height: $base-font-size * 2.5;
+            min-width: $base-font-size * 2.5;
+            float: right;
+            fill: $base-font-color;
+        }
+    }
+    input#tipue_search_input {
+        display: block;
+        //allow styling of the search in put in Safari on OSX and iOS
+        -webkit-appearance: textfield;
+        color: $base-font-color;
+        font-size: $base-font-size * 2;
+        font-weight: 300;
+        margin-top: 35px;
+        border-radius: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        max-width: $content-max-width;
+        border-bottom: 1px solid $base-font-color;
+        //remove clear "X" from search input on IE10+
+        &::-ms-clear{
+            display:none;
+        }
+        &:focus {
+            outline: none!important;
+            border-left: none!important;
+            border-right: none!important;
+            border-top: none!important;
+            color: black;
+            border-bottom: 1px solid $base-font-color;
+        }
+        @include MQ(M) {
+            font-size: $base-font-size * 3.5;
+            margin-top: 90px;
+        }
+    }
+    #tipue_search_content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+input:focus {
+    outline: none!important;
+    border: none!important;
+}

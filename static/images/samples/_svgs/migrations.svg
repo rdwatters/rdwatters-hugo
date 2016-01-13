@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" viewBox="0 0 44 46.25" version="1.1" x="0px" y="0px" fill="#012D4F">
+  <g stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+    <g sketch:type="MSArtboardGroup" fill="#012D4F">
+      <path d="M28,12 L28,5.99124431 C28,4.89989752 27.10296,4 25.9964051,4 L5.00359486,4 C3.88976324,4 3,4.89151044 3,5.99124431 L3,30.0087557 C3,31.1001025 3.89703997,32 5.00359486,32 L25.9964051,32 C27.1102368,32 28,31.1084896 28,30.0087557 L28,24 L24,24 L24,28 L7,28 L7,8 L24,8 L24,12 L28,12 Z" sketch:type="MSShapeGroup" />
+      <path d="M31,15 L11,15 L11,21 L31,21 L31,27 L41,18 L31,9 L31,15 Z"/>
+    </g>
+  </g>
+</svg>

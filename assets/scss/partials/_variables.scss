@@ -1,0 +1,111 @@
+//Layout
+$S:480px;
+$SM: 560px;
+$M:769px; // iPad portrait == 768px
+$L:960px;
+$XL:1200px;
+$MMAX:768px; // iPad portrai == 768px
+$content-max-width:700px;
+
+//COLOR PALETTE
+$brand: #2A2C39;
+$brand-two: #51B3FE;
+$brand-three: #013B68;
+$accent-color: #487557;
+$anchor-color: #5E727F;
+$button-color:$anchor-color;
+$warning-color: #66101F;
+$white:#ffffff;
+
+// BACKGROUNDS 
+// Body background and image or color backgrouns for site navigation and site header
+// You can find more background options courtesy of subtlepatterns.com in assets/images/backgrounds
+$body-background:$white;
+$header-background:url('/images/backgrounds/bg_slashit.png'),repeat,#000000;
+$header-background-repeat:repeat;
+$base-font-size:18px;
+$base-font-family:'Raleway',verdana,arial,sans-serif;
+$base-font-weight: 100;
+$base-font-color:#333333;
+$base-line-height:$base-font-size * 1.5;
+$heading-font-family: $base-font-family;
+$heading-font-color:#444444;
+$heading-font-weight: 900;
+$body-font-family:$base-font-family;
+$body-z:0;
+$header-height:60px;
+$header-link-color:#ffffff;
+$header-mobile-plus-width: 250px;
+
+
+$site-title-text-transform:none;
+$site-title-font-color:$header-link-color;
+$site-title-font-family:$heading-font-family;
+$site-logo-width-mobile:50px;
+$site-logo-width-desktop:120px;
+
+
+$global-nav-text-transform:uppercase;
+$global-nav-font-family:$site-title-font-family;
+$global-nav-font-size:$base-font-size * 1.5;
+$global-nav-font-size-mobile: 8vh;
+$global-nav-font-color:$header-link-color;
+$global-nav-background-mobile:$header-background;
+$global-nav-letter-spacing:1px;
+
+
+$article-heading-font-family: $heading-font-family;
+$article-headline-font-color: #ffffff;
+$article-subheading-font-size:$base-font-size * 1.2;
+$article-anchor-font-weight:700;
+$article-anchor-font-color:$anchor-color;
+$article-blockquote-background-color: $white;
+$article-blockquote-border-color: $accent-color;
+$article-blockquote-font-family: $base-font-family;
+$article-blockquote-text-transform: uppercase;
+$article-blockquote-author-attribution-separate-style: true; //set to false if you do not want to set the author of a quote apart from the main blockquote text
+$article-blockquote-author-attribution-text-transform: none;
+$article-codeblock-background-color:#111111;
+$article-header-background-image-size:cover;
+$article-header-background-image-position:center left;
+$article-header-image-min-height-mobile:50vh;
+$article-header-image-min-height-tablet-plus:50vh;
+$article-sticky-footer-background-color-m-plus:$white;
+$article-sticky-footer-tag-font-size:12px;
+$article-sticky-footer-tag-font-size-small:14px;
+$article-sticky-footer-tag-font-size-m-plus:14px;
+$article-sticky-footer-tag-font-weight: 100;
+$article-sticky-footer-tag-color:$heading-font-color;
+$article-sticky-footer-tag-hover-color:$brand-three;
+$article-sticky-footer-next-and-previous-title-background-color:$brand-three;
+$article-sticky-footer-next-and-previous-title-font-color:$white;
+
+$list-page-heading-background-color:$anchor-color;
+$list-page-heading-background-color-hover:darken($list-page-heading-background-color,20%);
+$list-page-heading-font-color:$white;
+
+//article headings (note that for mobile screens, these values are reduce to size * .85)
+$h1-font-size: $base-font-size * 1.7; //mobile = $h1-font-size * .75
+$h2-font-size: $base-font-size * 1.5; //mobile = $h2-font-size * .85
+$h3-font-size: $base-font-size * 1.4; //mobile = $h3-font-size * .85
+$h4-font-size: $base-font-size * 1.3; //mobile = $h4-font-size * .85
+
+//Styles for ...site/tags/ 
+$tag-page-tag-focus-background-color:$brand-three;
+$tag-page-match-list-heading-background-color:$brand-three;
+
+//Search and search page options
+$search-overlay-font-family:$base-font-family;
+$search-result-heading-font-size: $base-font-size * 1.3;
+$search-result-heading-font-family: $base-font-family;
+$search-result-heading-font-color: $base-font-color;
+$search-result-matching-term-text-color: $accent-color; 
+$search-icon-size-m-plus-screen-sizes: 32px;
+
+//Site footer
+$footer-link-color:#ffffff;
+$footer-background:$header-background;
+$footer-icon-size:30px;
+
+//Handy Social Media Colors SASS Map; see style-embed.scss for the @each directive
+$socials: (twitter:#00aced, github:#AB5B50, youtube:#bb0000, googleplus:#dd4b39, facebook:#3b5998, rss:#FF6600, pinterest:#cb2027, instagram:#517fa4, linkedin:#007bb6, vine:#00bf8f, tumblr:#32506d, vimeo:#aad450, foursquare:#0072b1); 

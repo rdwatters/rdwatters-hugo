@@ -1,0 +1,18 @@
+<!-- Standard Metadata -->
+<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Open Graph Protocol http://ogp.me/ -->
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
+<meta property="og:image" content="{{ if .Params.main_image }}{{.Site.BaseURL}}/images/{{.Params.main_image}}{{ else }}{{.Site.BaseURL}}/images/site-logo.png{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+<!-- Preconnect API. For browser compatibility, check http://caniuse.com/#feat=link-rel-preconnect -->
+<link rel="preconnect" href="{{ .Site.BaseURL }}">
+
+<!-- Generator -->
+{{.Hugo.Generator}}

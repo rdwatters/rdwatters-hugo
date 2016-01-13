@@ -1,0 +1,21 @@
+{{ partial "global_start.html" . }}
+
+<main id="main">
+	<article>
+	  <div>
+	    <h1 id="title">{{ .Title }}</h1>
+		<ul class="site-tags">
+	    {{ $data := .Data }}
+	    {{ range $key,$value := .Data.Terms.ByCount }}
+	    <li class="site-tag">
+			<a href="/tags/{{ $value.Name | urlize }}"class="tag-ajax">{{ $value.Name }}, {{ $value.Count }}</a>
+			</li>
+	    {{ end }}
+	  </ul>
+	  </div>
+	</article>
+</main>
+
+
+
+{{ partial "global_end.html" . }}

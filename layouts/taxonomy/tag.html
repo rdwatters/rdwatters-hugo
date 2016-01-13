@@ -1,0 +1,21 @@
+{{ partial "global_start.html" . }}
+
+<main id="main">
+<article>
+<header>
+	<a href="/tags/" id="content-by-tag" title="Search through site content by tag name">
+	{{ partial "_icons/tag-icon.svg" }}See all tags
+	</a>
+</header>
+   <h1 id="title">Tagged with "{{ .Title }}"</h1>
+   <ul class="content-list">
+    {{ range sort .Data.Pages "PublishDate" "desc" }}
+        <li><a class="list" href="{{.Permalink}}"><h1>{{ .Title }}</h1><time>{{ .PublishDate.Format "January 2, 2006" }}</time></a><p>{{ .Description }}</p></li>
+    {{ end }}
+    </ul>
+</article>
+</main>
+
+<aside id="meta"> </aside>
+
+{{ partial "global_end.html" . }}

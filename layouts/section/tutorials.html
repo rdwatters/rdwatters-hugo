@@ -1,0 +1,20 @@
+{{ partial "global_start.html" . }}
+<main id="main">
+<article>
+	<header>
+		<a href="/tags/" id="content-by-tag" title="Search through site content by tag name">{{ partial "_icons/tag-icon.svg" }}See all tags</a>
+		<h1>{{ .Title }}</h1> 		
+	</header>
+	{{ range .Data.Pages.GroupByParam "series" }} 
+	<h2 class="tutorial-section">{{ title .Key }}</h2>
+	<ul class="content-list">
+		{{ range sort .Pages "Params.series_no" }}
+		<li><a class="list" href="{{ .Permalink }}"><h1>{{ .Params.series_no }} - {{ .Title }}</h1></a>
+		<p>{{ .Description }}</p>
+		</li>
+		{{ end }}
+	</ul>
+	{{ end }}
+</article>
+</main>
+{{ partial "global_end.html" . }}

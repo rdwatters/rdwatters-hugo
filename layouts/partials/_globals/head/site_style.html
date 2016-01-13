@@ -1,0 +1,8 @@
+<!-- Critical Render Path (CRP) https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en -->
+{{if .Site.Params.UseCRP }}
+<style>
+{{ print (partial "style-embed.html" .) | safeCSS }}
+</style>
+{{ else }}
+<link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css">
+{{ end }}

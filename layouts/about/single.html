@@ -1,0 +1,17 @@
+{{ partial "global_start.html" . }}
+<main id="main">
+<article>
+<h1>{{.Title}}</h1>
+<section style="margin-top:150px;"></section>
+{{ $type := .Type }}
+{{ $image := .Params.main_image }}
+{{ range sort .Site.Pages "Title" }}
+{{ if and (eq .Type "articles") (isset .Params "main_image") }}
+<a href="{{.Permalink}}">
+<img src="/images/{{.Params.main_image}}" alt="" style="max-width:30%;">
+</a>
+{{ end }}
+{{ end }}
+</article>
+</main>
+{{ partial "global_end.html" . }}
